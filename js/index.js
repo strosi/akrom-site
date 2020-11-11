@@ -32,35 +32,37 @@ const worksSection = document.querySelector('.works');
 const worksList = document.querySelectorAll('.item-holder');
 let timeout;
 
-window.addEventListener('scroll', function (event) {
+if (servicesList != null && worksSection != null) {
+    window.addEventListener('scroll', function (event) {
 
-    // If there's a timer, cancel it
-    if (timeout) {
-        window.cancelAnimationFrame(timeout);
-    }
+        // If there's a timer, cancel it
+        if (timeout) {
+            window.cancelAnimationFrame(timeout);
+        }
 
-    // Setup the new requestAnimationFrame()
-    timeout = window.requestAnimationFrame(function () {
-        for (let i = 0; i < servicesList.length; i++) {
-            if (servicesList[i].getBoundingClientRect().top < (window.innerHeight - 70)) {
-                servicesList[i].classList.add('slide-vert');
-                servicesList[i].style.transitionDelay = 60 * i + 'ms';
+        // Setup the new requestAnimationFrame()
+        timeout = window.requestAnimationFrame(function () {
+            for (let i = 0; i < servicesList.length; i++) {
+                if (servicesList[i].getBoundingClientRect().top < (window.innerHeight - 70)) {
+                    servicesList[i].classList.add('slide-vert');
+                    servicesList[i].style.transitionDelay = 60 * i + 'ms';
+                }
             }
-        }
 
-        if (worksSection.getBoundingClientRect().top < window.innerHeight) {
-            worksSection.classList.add('show');
-        }
-
-
-        for (let i = 0; i < worksList.length; i++) {
-            console.log(i + ' item was scaled');
-            if (worksList[i].getBoundingClientRect().top < window.innerHeight) {
-                worksList[i].classList.add('scale-normal');
-                worksList[i].style.transitionDelay = 60 * i + 'ms';
+            if (worksSection.getBoundingClientRect().top < window.innerHeight) {
+                worksSection.classList.add('show');
             }
-        }
-    });
 
-}, false);
+
+            for (let i = 0; i < worksList.length; i++) {
+                console.log(i + ' item was scaled');
+                if (worksList[i].getBoundingClientRect().top < window.innerHeight) {
+                    worksList[i].classList.add('scale-normal');
+                    worksList[i].style.transitionDelay = 60 * i + 'ms';
+                }
+            }
+        });
+
+    }, false);
+}
 // <<<<<
