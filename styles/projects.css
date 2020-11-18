@@ -1,0 +1,44 @@
+.header-illustration {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(68, 109, 165, 0.9), rgba(92, 126, 172, 0.8)), url('../images/projects.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.header-illustration .header-text {
+    font-size: 0.95em;
+    color: white;
+    z-index: 10;
+}
+
+.header-illustration .header-text>h1 {
+    position: absolute;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 2rem;
+}
+
+.gallery {
+    padding: 7rem 0;
+}
+
+@media (min-width: 600px) {
+    .header-illustration .header-text>h1 {
+        top: 50%;
+        /* bottom: 35px; */
+        padding: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .header-illustration .header-text {
+        position: static;
+        top: unset;
+        transform: unset;
+    }
+}

@@ -33,10 +33,6 @@ h1, h2, h3, button, nav>ul li a {
     letter-spacing: 0.03em;
 }
 
-nav>ul li a:hover {
-    color: #01d2b5;
-}
-
 h3 {
     font-size: 1em;
     line-height: 1.5;
@@ -155,7 +151,7 @@ nav>ul a, .menu-links>ul a, .section-title, .side-title {
 
 .nav-holder {
     position: absolute;
-    top: 60px;
+    top: 48px;
     text-align: center;
     width: 100%;
     height: 0;
@@ -179,6 +175,10 @@ nav>ul li a {
     display: block;
     font-size: 0.85em;
     padding: 1rem 0.7rem;
+}
+
+nav>ul li a:hover, .active-page {
+    color: #01d2b5;
 }
 
 .nav-holder .mail-us-btn {
@@ -322,12 +322,6 @@ nav>ul li a {
 .works {
     position: relative;
     background-color: #fff1e2;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-.works.show {
-    opacity: 1;
 }
 
 .works .side-title h1 {
