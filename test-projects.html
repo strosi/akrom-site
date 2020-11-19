@@ -90,8 +90,8 @@
             //     // observer.observe(imgContainer);
             // });
 
-            for(let i = 0; i < 0; i++) {
-                let imgUrl = 'images/main-gallery/' + arr[i].projectName + '/' + arr[i].projectName + '-thumb.jpg';
+            for(let item in arr) {
+                let imgUrl = 'images/main-gallery/' + item.projectName + '/' + item.projectName + '-thumb.jpg';
                 let newImg = document.createElement('img');
                 newImg.setAttribute('src', imgUrl);
 
