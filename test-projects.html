@@ -46,7 +46,7 @@
         let request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
+            if (this.readyState == 4) {
                 let projects = JSON.parse(this.responseText);
                 populateGallery(projects);
             }
