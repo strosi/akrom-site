@@ -46,7 +46,7 @@
         let request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
-            if (this.readyState == 4) {
+            if (this.readyState == 4 && this.status == 200) {
                 let projects = JSON.parse(this.responseText);
                 populateGallery(projects);
             }
@@ -56,19 +56,19 @@
 
         function populateGallery(arr) {
             let gallery = document.querySelector('.gallery');
-            let observer = new IntersectionObserver((entries) => {
-                console.log(entries);
+            // let observer = new IntersectionObserver((entries) => {
+            //     console.log(entries);
 
-                entries.forEach(entry => {
-                    if(entry.intersectionRatio > 0) {
-                        entry.target.style.opacity = 1;
-                        entry.target.firstElementChild.style.transform = 'scale(1)';
-                    } else {
-                        entry.target.style.opacity = 0.5;
-                        entry.target.firstElementChild.style.transform = 'scale(0.5)';
-                    }
-                })
-            });
+            //     entries.forEach(entry => {
+            //         if(entry.intersectionRatio > 0) {
+            //             entry.target.style.opacity = 1;
+            //             entry.target.firstElementChild.style.transform = 'scale(1)';
+            //         } else {
+            //             entry.target.style.opacity = 0.5;
+            //             entry.target.firstElementChild.style.transform = 'scale(0.5)';
+            //         }
+            //     })
+            // });
 
             arr.forEach(item => {
                 let imgUrl = 'images/main-gallery/' + item.projectName + '/' + item.projectName + '-thumb.jpg';
@@ -80,7 +80,7 @@
                 imgContainer.classList.add('gallery-item');
                 gallery.appendChild(imgContainer);
 
-                observer.observe(imgContainer);
+                // observer.observe(imgContainer);
             });
         }
     </script>
