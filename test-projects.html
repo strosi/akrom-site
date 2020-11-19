@@ -44,13 +44,6 @@
     <script>
         const jsonUrl = 'images/main-gallery/main-gallery-items.json';
         let request = new XMLHttpRequest();
-        // let request;
-
-        // if (window.ActiveXObject) {
-        //     request = new ActiveXObject('Microsoft.XMLHTTP');
-        // } else {
-        //     request = new XMLHttpRequest();
-        // }
 
         request.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
@@ -63,34 +56,19 @@
 
         function populateGallery(arr) {
             let gallery = document.querySelector('.gallery');
-            // let observer = new IntersectionObserver((entries) => {
-            //     console.log(entries);
+            let observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.intersectionRatio > 0) {
+                        entry.target.style.opacity = 1;
+                        entry.target.firstElementChild.style.transform = 'scale(1)';
+                    } else {
+                        entry.target.style.opacity = 0.5;
+                        entry.target.firstElementChild.style.transform = 'scale(0.5)';
+                    }
+                })
+            });
 
-            //     entries.forEach(entry => {
-            //         if(entry.intersectionRatio > 0) {
-            //             entry.target.style.opacity = 1;
-            //             entry.target.firstElementChild.style.transform = 'scale(1)';
-            //         } else {
-            //             entry.target.style.opacity = 0.5;
-            //             entry.target.firstElementChild.style.transform = 'scale(0.5)';
-            //         }
-            //     })
-            // });
-
-            // arr.forEach(item => {
-            //     let imgUrl = 'images/main-gallery/' + item.projectName + '/' + item.projectName + '-thumb.jpg';
-            //     let newImg = document.createElement('img');
-            //     newImg.setAttribute('src', imgUrl);
-
-            //     let imgContainer = document.createElement('div');
-            //     imgContainer.appendChild(newImg);
-            //     imgContainer.classList.add('gallery-item');
-            //     gallery.appendChild(imgContainer);
-
-            //     // observer.observe(imgContainer);
-            // });
-
-            for(let i = 0; i < arr.length; i++) {
+            for (let i = 0; i < arr.length; i++) {
                 let imgUrl = 'images/main-gallery/' + arr[i].projectName + '/' + arr[i].projectName + '-thumb.jpg';
                 let newImg = document.createElement('img');
                 newImg.setAttribute('src', imgUrl);
@@ -99,6 +77,13 @@
                 imgContainer.appendChild(newImg);
                 imgContainer.classList.add('gallery-item');
                 gallery.appendChild(imgContainer);
+
+                observer.observe(imgContainer);
+
+                if (/MSIE (\d+\.\d+);/.test(navigator.userAgent) || navigator.userAgent.indexOf("Trident/") > -1) {
+                    imgContainer.style.opacity = 1;
+                    imgContainer.firstChild.style.transform = 'scale(1)';
+                }
             }
         }
     </script>
