@@ -56,17 +56,25 @@
 
         function populateGallery(arr) {
             let gallery = document.querySelector('.gallery');
-            let observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.intersectionRatio > 0) {
-                        entry.target.style.opacity = 1;
-                        entry.target.firstElementChild.style.transform = 'scale(1)';
-                    } else {
-                        entry.target.style.opacity = 0.5;
-                        entry.target.firstElementChild.style.transform = 'scale(0.5)';
-                    }
-                })
-            });
+            let isMSIE = false;
+
+            if (/MSIE (\d+\.\d+);/.test(navigator.userAgent) || navigator.userAgent.indexOf("Trident/") > -1) {
+                isMSIE = true;
+            }
+
+            if (!isMSIE) {
+                let observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.intersectionRatio > 0) {
+                            entry.target.style.opacity = 1;
+                            entry.target.firstElementChild.style.transform = 'scale(1)';
+                        } else {
+                            entry.target.style.opacity = 0.5;
+                            entry.target.firstElementChild.style.transform = 'scale(0.5)';
+                        }
+                    })
+                });
+            }
 
             for (let i = 0; i < arr.length; i++) {
                 let imgUrl = 'images/main-gallery/' + arr[i].projectName + '/' + arr[i].projectName + '-thumb.jpg';
@@ -78,9 +86,9 @@
                 imgContainer.classList.add('gallery-item');
                 gallery.appendChild(imgContainer);
 
-                observer.observe(imgContainer);
-
-                if (/MSIE (\d+\.\d+);/.test(navigator.userAgent) || navigator.userAgent.indexOf("Trident/") > -1) {
+                if (!isMSIE) {
+                    observer.observe(imgContainer);
+                } else {
                     imgContainer.style.opacity = 1;
                     imgContainer.firstChild.style.transform = 'scale(1)';
                 }
