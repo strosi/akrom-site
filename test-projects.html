@@ -43,7 +43,14 @@
 
     <script>
         const jsonUrl = 'images/main-gallery/main-gallery-items.json';
-        let request = new XMLHttpRequest();
+        // let request = new XMLHttpRequest();
+        let request;
+
+        if (window.ActiveXObject) {
+            request = new ActiveXObject('Microsoft.XMLHTTP');
+        } else {
+            request = new XMLHttpRequest();
+        }
 
         request.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
