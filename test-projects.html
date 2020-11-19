@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic gallery</title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: none;
+            box-sizing: border-box;
+        }
+
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -16,8 +23,15 @@
             margin: 0 auto;
         }
 
-        .gallery-item img {
+        div.gallery-item {
+            opacity: 0.1;
             padding: 1rem;
+            transition: opacity 1s ease;
+        }
+
+        div.gallery-item img {
+            transform: scale(0.5);
+            transition: transform 0.5s ease;
         }
     </style>
 </head>
@@ -42,14 +56,31 @@
 
         function populateGallery(arr) {
             let gallery = document.querySelector('.gallery');
+            let observer = new IntersectionObserver((entries) => {
+                console.log(entries);
+
+                entries.forEach(entry => {
+                    if(entry.intersectionRatio > 0) {
+                        entry.target.style.opacity = 1;
+                        entry.target.firstElementChild.style.transform = 'scale(1)';
+                    } else {
+                        entry.target.style.opacity = 0.5;
+                        entry.target.firstElementChild.style.transform = 'scale(0.5)';
+                    }
+                })
+            });
 
             arr.forEach(item => {
-                console.log(item.projectName);
-
                 let imgUrl = 'images/main-gallery/' + item.projectName + '/' + item.projectName + '-thumb.jpg';
                 let newImg = document.createElement('img');
                 newImg.setAttribute('src', imgUrl);
-                gallery.appendChild(newImg);
+
+                let imgContainer = document.createElement('div');
+                imgContainer.appendChild(newImg);
+                imgContainer.classList.add('gallery-item');
+                gallery.appendChild(imgContainer);
+
+                observer.observe(imgContainer);
             });
         }
     </script>
