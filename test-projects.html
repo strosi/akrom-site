@@ -77,8 +77,21 @@
             //     })
             // });
 
-            arr.forEach(item => {
-                let imgUrl = 'images/main-gallery/' + item.projectName + '/' + item.projectName + '-thumb.jpg';
+            // arr.forEach(item => {
+            //     let imgUrl = 'images/main-gallery/' + item.projectName + '/' + item.projectName + '-thumb.jpg';
+            //     let newImg = document.createElement('img');
+            //     newImg.setAttribute('src', imgUrl);
+
+            //     let imgContainer = document.createElement('div');
+            //     imgContainer.appendChild(newImg);
+            //     imgContainer.classList.add('gallery-item');
+            //     gallery.appendChild(imgContainer);
+
+            //     // observer.observe(imgContainer);
+            // });
+
+            for(let i = 0; i < 0; i++) {
+                let imgUrl = 'images/main-gallery/' + arr[i].projectName + '/' + arr[i].projectName + '-thumb.jpg';
                 let newImg = document.createElement('img');
                 newImg.setAttribute('src', imgUrl);
 
@@ -86,9 +99,7 @@
                 imgContainer.appendChild(newImg);
                 imgContainer.classList.add('gallery-item');
                 gallery.appendChild(imgContainer);
-
-                // observer.observe(imgContainer);
-            });
+            }
         }
     </script>
 </body>
