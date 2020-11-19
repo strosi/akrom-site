@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic gallery</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 30%;
+            justify-content: space-around;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item img {
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery">
+        <!-- JavaScript loaded gallery -->
+    </div>
+
+    <script>
+        const jsonUrl = 'images/main-gallery/main-gallery-items.json';
+        let request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                let projects = JSON.parse(this.responseText);
+                populateGallery(projects);
+            }
+        };
+        request.open('GET', jsonUrl, true);
+        request.send();
+
+        function populateGallery(arr) {
+            let gallery = document.querySelector('.gallery');
+
+            arr.forEach(item => {
+                console.log(item.projectName);
+
+                let imgUrl = 'images/main-gallery/' + item.projectName + '/' + item.projectName + '-thumb.jpg';
+                let newImg = document.createElement('img');
+                newImg.setAttribute('src', imgUrl);
+                gallery.appendChild(newImg);
+            });
+        }
+    </script>
+</body>
+
+</html>
