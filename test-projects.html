@@ -165,6 +165,7 @@
             if (this.readyState == 4 && this.status == 200) {
                 projects = JSON.parse(this.responseText);
                 populateGallery(projects);
+                console.log(projects);
             }
         };
         request.open('GET', jsonUrl, true);
