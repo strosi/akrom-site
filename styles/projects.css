@@ -27,6 +27,124 @@
     padding: 7rem 0;
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 30%;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+div.gallery-item {
+    opacity: 0.1;
+    padding: 1rem;
+    transition: opacity 1s ease;
+}
+
+div.gallery-item img {
+    transform: scale(0.5);
+    transition: transform 0.5s ease;
+}
+
+/* Subgallery styles */
+
+.subgallery {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.subgallery.active {
+    display: block;
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+.subgallery .subgallery-navi {
+    display: flex;
+    justify-content: space-around;
+    max-width: 500px;
+    width: 90%;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+}
+
+.subgallery button {
+    text-transform: uppercase;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.subgallery button:focus {
+    outline: none;
+}
+
+.subgallery button.noActiveBtn {
+    color: grey;
+    cursor: default;
+}
+
+.subgallery>.inner-wrapper {
+    overflow-x: auto;
+    max-width: 1400px;
+    width: 90%;
+    height: 93%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.subgallery .content-holder {
+    max-width: 1000px;
+    width: 80%;
+    padding: 3rem 0;
+    margin: 0 auto;
+}
+
+.subgallery .inner-wrapper .project-images img {
+    width: 100%;
+}
+
+.subgallery .description {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 5rem auto;
+}
+
+.subgallery .description p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.subgallery .description h2 {
+    font-size: 1.4em;
+    margin: 0;
+}
+
+.subgallery .inner-wrapper .project-images img {
+    margin: 1rem auto;
+}
+
+.subgallery .inner-wrapper .description .title {
+    width: 40%;
+}
+
+.subgallery .inner-wrapper .description .text {
+    width: 60%;
+}
+
 @media (min-width: 600px) {
     .header-illustration .header-text>h1 {
         top: 50%;
