@@ -183,27 +183,10 @@
                 })
             });
 
-            // arr.forEach(item => {
-            //     let imgUrl = 'images/main-gallery/' + item.projectName + '/' + item.projectName + '-thumb.jpg';
-            //     let newImg = document.createElement('img');
-            //     newImg.setAttribute('src', imgUrl);
-
-            //     let imgContainer = document.createElement('div');
-            //     imgContainer.appendChild(newImg);
-            //     imgContainer.classList.add('gallery-item');
-            //     gallery.appendChild(imgContainer);
-
-            //     observer.observe(imgContainer);
-            // });
-
             for (let i = 0; i < arr.length; i++) {
                 let imgUrl = 'images/main-gallery/' + arr[i].projectName + '/' + arr[i].thumbImg;
                 let newImg = document.createElement('img');
                 newImg.setAttribute('src', imgUrl);
-
-                console.log(arr[i]);
-                console.log('imgUrl = ' + imgUrl);
-                console.log('newImg = ' + newimg);
 
                 let imgContainer = document.createElement('div');
                 imgContainer.appendChild(newImg);
@@ -288,7 +271,7 @@
             }
         });
 
-        // Set subgallery previous, close, next functionalities
+        // Set subgallery 'previous', 'close', 'next' functionalities
         function removeSubGalleryContent() {
             subGalleryImgs.innerHTML = '';
             titleHolder.innerHTML = '';

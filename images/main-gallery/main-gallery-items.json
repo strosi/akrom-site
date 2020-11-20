@@ -1,6 +1,7 @@
 [
 	{
 		"projectName": "wall-calendar-03",
+		"thumbImg": "wall-calendar-03-thumb.jpg",
 		"thumbText": "Wall calendar mockup 03",
 		"subImagesCount": 5,
 		"client": "Client Name01",
@@ -9,6 +10,7 @@
 	},
 	{
 		"projectName": "annual-report-02",
+		"thumbImg": "annual-report-02-thumb.jpg",
 		"thumbText": "Annual report mockup 02",
 		"subImagesCount": 5,
 		"client": "Client Name02",
@@ -17,6 +19,7 @@
 	},
 	{
 		"projectName": "annual-report-01",
+		"thumbImg": "annual-report-01-thumb.jpg",
 		"thumbText": "Annual report mockup 01",
 		"subImagesCount": 3,
 		"client": "Client Name03",
@@ -25,6 +28,7 @@
 	},
 	{
 		"projectName": "brochure-a4",
+		"thumbImg": "brochure-a4-thumb.jpg",
 		"thumbText": "Brochure A4 format",
 		"subImagesCount": 3,
 		"client": "Client Name04",
@@ -33,6 +37,7 @@
 	},
 	{
 		"projectName": "business-identity",
+		"thumbImg": "business-identity-thumb.jpg",
 		"thumbText": "Business identity",
 		"subImagesCount": 3,
 		"client": "Client Name05",
@@ -41,6 +46,7 @@
 	},
 	{
 		"projectName": "brochure-trifold",
+		"thumbImg": "brochure-trifold-thumb.jpg",
 		"thumbText": "Brochure trifold",
 		"subImagesCount": 3,
 		"client": "Client Name06",
@@ -49,6 +55,7 @@
 	},
 	{
 		"projectName": "brochure-a5",
+		"thumbImg": "brochure-a5-thumb.jpg",
 		"thumbText": "Brochure A5 format",
 		"subImagesCount": 3,
 		"client": "Client Name07",
@@ -57,6 +64,7 @@
 	},
 	{
 		"projectName": "wall-calendar-01",
+		"thumbImg": "wall-calendar-01-thumb.jpg",
 		"thumbText": "Wall calendar mockup 01",
 		"subImagesCount": 2,
 		"client": "Client Name08",
@@ -65,6 +73,7 @@
 	},
 	{
 		"projectName": "wall-calendar-02",
+		"thumbImg": "wall-calendar-02-thumb.jpg",
 		"thumbText": "Wall calendar mockup 02",
 		"subImagesCount": 2,
 		"client": "Client Name09",
