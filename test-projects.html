@@ -165,13 +165,13 @@
             if (this.readyState == 4 && this.status == 200) {
                 projects = JSON.parse(this.responseText);
                 populateGallery(projects);
-                console.log(projects);
             }
         };
         request.open('GET', jsonUrl, true);
         request.send();
 
         function populateGallery(arr) {
+            console.log(arr);
             let observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.intersectionRatio > 0) {
@@ -198,6 +198,7 @@
             // });
 
             for (let i = 0; i < arr.length; i++) {
+                console.log(arr[i]);
                 let imgUrl = 'images/main-gallery/' + arr[i].projectName + '/' + arr[i].thumbImg;
                 let newImg = document.createElement('img');
                 newImg.setAttribute('src', imgUrl);
