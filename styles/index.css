@@ -498,6 +498,7 @@ footer .copyright {
         justify-content: flex-end;
         align-items: center;
         height: 50px;
+        z-index: 5;
     }
     nav {
         max-width: 400px;

@@ -1,0 +1,121 @@
+.header-illustration {
+    position: relative;
+    height: 378px;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(68, 109, 165, 0.9), rgba(92, 126, 172, 0.8)), url('../images/mailing.jpg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.header-illustration .header-text {
+    font-size: 0.95em;
+    color: white;
+    z-index: 10;
+}
+
+.header-illustration .header-text>h1 {
+    position: absolute;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 2rem;
+}
+
+.contacts .outer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 7rem 0;
+}
+
+.contacts .contact-means {
+    min-width: 300px;
+    margin-top: 1rem;
+}
+
+.contacts .contact-means li {
+    display: flex;
+    line-height: 1.7em;
+    text-align: left;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.contacts .contact-means li p {
+    margin-left: 1rem;
+}
+
+.contacts .request-form {
+    flex-basis: 60%;
+    text-align: left;
+}
+
+.contacts .request-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contacts .request-form .field {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+
+.contacts .request-form .field label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+}
+
+.contacts .request-form .field.name,
+.contacts .request-form .field.email {
+    flex-basis: 48%;
+}
+
+.contacts .request-form .field.type,
+.contacts .request-form .field.descript {
+    flex-basis: 100%;
+}
+
+.contacts .request-form input,
+.contacts .request-form textarea {
+    font-size: 1em;
+    padding: 0.7rem;
+    border: 1px solid #aaa;
+    background-color: #fff7ec;
+    resize: none;
+}
+
+.contacts .request-form .submit-btn {
+    position: relative;
+    flex-basis: 100%;
+}
+
+.contacts .request-form button {
+    position: absolute;
+    right: 0;
+    margin-top: 1rem;
+}
+
+.map iframe#gmap_canvas {
+    display: block;
+    width: 100%;
+    height: 500px;
+}
+
+@media (min-width: 600px) {
+    .header-illustration .header-text>h1 {
+        top: 50%;
+        padding: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .header-illustration .header-text {
+        position: static;
+        top: unset;
+        transform: unset;
+    }
+}
