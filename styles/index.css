@@ -330,9 +330,13 @@ nav>ul li a:hover, .active-page {
 
 .works .section-title {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     padding-top: 5rem;
+}
+
+.works .section-title a {
+    margin-top: 1rem;
 }
 
 .gallery {
@@ -466,6 +470,13 @@ footer .copyright {
     .service p {
         max-width: 190px;
         border: none;
+    }
+    .works .section-title {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .works .section-title a {
+        margin-top: 0;
     }
     .gallery-item {
         flex-basis: 50%;
