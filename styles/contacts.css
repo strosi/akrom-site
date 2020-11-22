@@ -1,3 +1,7 @@
+.nav-holder.opened {
+    height: 185px;
+}
+
 .header-illustration {
     position: relative;
     height: 378px;
@@ -25,13 +29,14 @@
 
 .contacts .outer-wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 7rem 0;
 }
 
 .contacts .contact-means {
-    min-width: 300px;
-    margin-top: 1rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
 }
 
 .contacts .contact-means li {
@@ -43,6 +48,7 @@
 }
 
 .contacts .contact-means li p {
+    font-size: 0.95em;
     margin-left: 1rem;
 }
 
@@ -60,6 +66,7 @@
 .contacts .request-form .field {
     display: flex;
     flex-direction: column;
+    flex-basis: 100%;
     margin: 0.5rem 0;
 }
 
@@ -69,17 +76,17 @@
     margin: 0.5rem 0;
 }
 
-.contacts .request-form .field.name,
+/* .contacts .request-form .field.name, 
 .contacts .request-form .field.email {
     flex-basis: 48%;
 }
 
-.contacts .request-form .field.type,
+.contacts .request-form .field.type, 
 .contacts .request-form .field.descript {
     flex-basis: 100%;
-}
+} */
 
-.contacts .request-form input,
+.contacts .request-form input, 
 .contacts .request-form textarea {
     font-size: 1em;
     padding: 0.7rem;
@@ -110,6 +117,10 @@
         top: 50%;
         padding: 0;
     }
+    .contacts .request-form .field.name, 
+    .contacts .request-form .field.email {
+        flex-basis: 48%;
+    }
 }
 
 @media (min-width: 900px) {
@@ -117,5 +128,16 @@
         position: static;
         top: unset;
         transform: unset;
+    }
+    .contacts .outer-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contacts .contact-means {
+        margin: 0;
+        margin-top: 1rem;
+    }
+    .contacts .contact-means li p {
+        font-size: 1em;
     }
 }
