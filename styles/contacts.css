@@ -76,16 +76,6 @@
     margin: 0.5rem 0;
 }
 
-/* .contacts .request-form .field.name, 
-.contacts .request-form .field.email {
-    flex-basis: 48%;
-}
-
-.contacts .request-form .field.type, 
-.contacts .request-form .field.descript {
-    flex-basis: 100%;
-} */
-
 .contacts .request-form input, 
 .contacts .request-form textarea {
     font-size: 1em;

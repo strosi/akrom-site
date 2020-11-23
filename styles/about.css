@@ -72,10 +72,9 @@
 }
 
 .about .presentation p {
-    font-size: 0.9em;
     line-height: 1.5;
     text-align: left;
-    max-width: 600px;
+    max-width: 670px;
     padding-top: 1.5rem;
     margin: 0 auto;
     color: #333333;
