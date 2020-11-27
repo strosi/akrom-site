@@ -543,14 +543,15 @@ footer .copyright {
     }
     .illustration {
         justify-content: flex-end;
+        align-items: flex-end;
     }
     .illustration img {
         width: 60%;
-        /* padding-top: 8%; */
+        padding-top: 8%;
         padding-right: 5%;
     }
     .about .illustration {
-        /* padding-bottom: 10rem; */
+        padding-bottom: 10rem;
     }
     .about .illustration img {
         padding-top: 0;
