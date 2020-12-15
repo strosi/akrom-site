@@ -25,6 +25,7 @@
     left: 50%;
     transform: translateX(-50%);
     padding-top: 2rem;
+    text-shadow: 7px 5px 4px rgb(31 61 103 / 50%);
 }
 
 .contacts .outer-wrapper {
@@ -83,6 +84,11 @@
     border: 1px solid #aaa;
     background-color: #fff7ec;
     resize: none;
+}
+
+.contacts .request-form input:focus, 
+.contacts .request-form textarea:focus {
+    outline: none;
 }
 
 .contacts .request-form .submit-btn {

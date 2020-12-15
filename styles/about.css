@@ -31,6 +31,7 @@
     left: 50%;
     transform: translateX(-50%);
     padding-top: 2rem;
+    text-shadow: 7px 5px 4px rgb(31 61 103 / 50%);
 }
 
 .header-illustration .header-text>h3 {
