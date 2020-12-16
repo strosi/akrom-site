@@ -1,9 +1,7 @@
 const isHomePage = document.querySelector('title').innerHTML === 'Акром';
-let path;
+let path = 'images/main-gallery/';
 
-if(isHomePage) {
-    path = 'images/main-gallery/';
-} else {
+if(!isHomePage) {
     path = '../images/main-gallery/';
 }
 
