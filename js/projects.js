@@ -43,7 +43,7 @@ let galleryModule = (function () {
     }
 })();
 
-const jsonUrl = '../images/main-gallery/main-gallery-items.json';
+const jsonUrl = 'images/main-gallery/main-gallery-items.json';
 let request = new XMLHttpRequest();
 let projectsArr;
 let projectsGallery = document.querySelector('.gallery');
