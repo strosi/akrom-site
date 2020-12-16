@@ -1,3 +1,12 @@
+const isHomePage = document.querySelector('title').innerHTML === 'Акром';
+let path;
+
+if(isHomePage) {
+    path = 'images/main-gallery/';
+} else {
+    path = '../images/main-gallery/';
+}
+
 // Load images in the main gallery from json file
 let galleryModule = (function () {
     return {
@@ -6,7 +15,7 @@ let galleryModule = (function () {
             let projectsCount = arr.length;
 
             // If the current page is the home page, shows only the first six projects in the gallery
-            if(document.querySelector('title').innerHTML === 'Акром') {
+            if(isHomePage) {
                 projectsCount = 6;
             }
 
@@ -22,7 +31,7 @@ let galleryModule = (function () {
             });
 
             for (let i = 0; i < projectsCount; i++) {
-                let imgUrl = '../images/main-gallery/' + arr[i].projectName + '/' + arr[i].thumbImg;
+                let imgUrl = path + arr[i].projectName + '/' + arr[i].thumbImg;
                 let newImg = document.createElement('img');
                 newImg.setAttribute('src', imgUrl);
                 newImg.setAttribute('id', i.toString());
@@ -43,7 +52,7 @@ let galleryModule = (function () {
     }
 })();
 
-const jsonUrl = 'images/main-gallery/main-gallery-items.json';
+const jsonUrl = path + 'main-gallery-items.json';
 let request = new XMLHttpRequest();
 let projectsArr;
 let projectsGallery = document.querySelector('.gallery');
@@ -74,7 +83,7 @@ let popupModule = (function () {
 
     loadPopupImgs = function (obj) {
         for (let i = 0; i < obj.subImagesCount; i++) {
-            const subImgSrc = '../images/main-gallery/' + obj.projectName + '/' + obj.projectName + '-' + (i + 1) + '.jpg';
+            const subImgSrc = path + obj.projectName + '/' + obj.projectName + '-' + (i + 1) + '.jpg';
             const newImg = document.createElement('img');
             newImg.setAttribute('src', subImgSrc);
             imgsContainer.append(newImg);
