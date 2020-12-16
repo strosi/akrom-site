@@ -2,23 +2,26 @@
 let galleryModule = (function () {
     return {
         populateGallery: function (arr, galleryContainer) {
+
+            let projectsCount = arr.length;
+
+            // If the current page is the home page, shows only the first six projects in the gallery
+            if(document.querySelector('title').innerHTML === 'Акром') {
+                projectsCount = 6;
+            }
+
             let observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.intersectionRatio > 0) {
                         entry.target.classList.remove('zoomout');
-                        // entry.target.style.opacity = 1;
-                        // entry.target.firstElementChild.classList.remove('zoomout');
-                        // entry.target.firstElementChild.style.transform = 'scale(1)';
+                        entry.target.style.transitionDelay = 60 * (parseInt(entry.target.firstElementChild.id)) + 'ms';
                     } else {
                         entry.target.classList.add('zoomout');
-                        // entry.target.style.opacity = 0.5;
-                        // entry.target.firstElementChild.classList.add('zoomout');
-                        // entry.target.firstElementChild.style.transform = 'scale(0.5)';
                     }
                 })
             });
 
-            for (let i = 0; i < arr.length; i++) {
+            for (let i = 0; i < projectsCount; i++) {
                 let imgUrl = '../images/main-gallery/' + arr[i].projectName + '/' + arr[i].thumbImg;
                 let newImg = document.createElement('img');
                 newImg.setAttribute('src', imgUrl);
@@ -161,8 +164,8 @@ let popupModule = (function () {
 })();
 
 // Popup layout container and inner containers
-const projectPopupLayout = document.querySelector('.subgallery');
-const projectPopupImgs = document.querySelector('.subgallery .project-images');
+const projectPopupLayout = document.querySelector('.popup-layout');
+const projectPopupImgs = document.querySelector('.popup-layout .project-images');
 const projectTitle = document.querySelector('.description .title');
 const projectDescription = document.querySelector('.description .text');
 // Popup layout navigation buttons

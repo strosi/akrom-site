@@ -478,7 +478,7 @@ footer .copyright {
     .works .section-title a {
         margin-top: 0;
     }
-    .gallery-item {
+    /* .gallery-item {
         flex-basis: 50%;
     }
     .gallery-item .item-holder {
@@ -496,7 +496,7 @@ footer .copyright {
     }
     .gallery-item .item-holder img:hover {
         transform: scale(1.1);
-    }
+    } */
 }
 
 @media (min-width: 900px) {

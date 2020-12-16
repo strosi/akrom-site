@@ -54,13 +54,13 @@ if (servicesList != null && worksSection != null) {
             }
 
 
-            for (let i = 0; i < worksList.length; i++) {
-                console.log(i + ' item was scaled');
-                if (worksList[i].getBoundingClientRect().top < window.innerHeight) {
-                    worksList[i].classList.add('scale-normal');
-                    worksList[i].style.transitionDelay = 60 * i + 'ms';
-                }
-            }
+            // for (let i = 0; i < worksList.length; i++) {
+            //     console.log(i + ' item was scaled');
+            //     if (worksList[i].getBoundingClientRect().top < window.innerHeight) {
+            //         worksList[i].classList.add('scale-normal');
+            //         worksList[i].style.transitionDelay = 60 * i + 'ms';
+            //     }
+            // }
         });
 
     }, false);
