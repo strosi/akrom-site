@@ -1,5 +1,86 @@
 [
 	{
+		"projectName": "wall-calendar-podkrepa-2021",
+		"thumbImg": "wall-calendar-podkrepa-2021-thumb.jpg",
+		"thumbText": "Стенен календар 2021",
+		"subImagesCount": 6,
+		"client": "КТ Пдкрепа - Стара Загора",
+		"projectType": "Стенен календар",
+		"description": "Многолистов стенен календар с размери 330х460мм изработен по поръчка."
+	},
+	{
+		"projectName": "wall-calendar-vik-2021",
+		"thumbImg": "wall-calendar-vik-2021-thumb.jpg",
+		"thumbText": "Стенен календар 2021",
+		"subImagesCount": 7,
+		"client": "ВиК - Стара Загора",
+		"projectType": "Стенен календар",
+		"description": "Многолистов стенен календар с размери 480х680мм изработен по поръчка."
+	},
+	{
+		"projectName": "wall-calendar-podkrepa-2019",
+		"thumbImg": "wall-calendar-podkrepa-2019-thumb.jpg",
+		"thumbText": "Стенен календар 2019",
+		"subImagesCount": 4,
+		"client": "КТ Пдкрепа - Стара Загора",
+		"projectType": "Стенен календар",
+		"description": "Многолистов стенен календар с размери 330х460мм изработен по поръчка."
+	},
+	{
+		"projectName": "wall-calendar-sz-district-2018",
+		"thumbImg": "wall-calendar-sz-district-2018-thumb.jpg",
+		"thumbText": "Стенен календар 2018",
+		"subImagesCount": 3,
+		"client": "Областна управа - Стара Загора",
+		"projectType": "Стенен календар",
+		"description": "Многолистов стенен календар с размери 330х460мм изработен по поръчка."
+	},
+	{
+		"projectName": "manual-troshev-2018",
+		"thumbImg": "manual-troshev-2018-thumb.jpg",
+		"thumbText": "Книжка с указания за пациентите на клиника Трошев",
+		"subImagesCount": 4,
+		"client": "Очна клиника Трошев",
+		"projectType": "Книжка тип брошура",
+		"description": "Малка книжка с указания за пациента изработена за клиника \"Трошев\". Размери на страницата 200x165мм, с единичен биг на предна и задна корица."
+	},
+	{
+		"projectName": "packs-croissants-hlebo-2018",
+		"thumbImg": "packs-croissants-hlebo-2018-thumb.jpg",
+		"thumbText": "Опаковка за мини кроасани",
+		"subImagesCount": 5,
+		"client": "Хлебопроизводство СЗ",
+		"projectType": "Опаковка",
+		"description": "Проект за опаковка на мини кроасаните на Хлебопроизводство - Стара Загора."
+	},
+	{
+		"projectName": "annual-report-mmi-2013",
+		"thumbImg": "annual-report-mmi-2013-thumb.jpg",
+		"thumbText": "Годишен отчет за 2013 на ММИ",
+		"subImagesCount": 3,
+		"client": "Мини \"Марица-изток\"",
+		"projectType": "Книжка",
+		"description": "Годишен отчет за 2013 на Мини \"Марица-изток\"."
+	},
+	{
+		"projectName": "brochure-vidachim-2014",
+		"thumbImg": "brochure-vidachim-2014-thumb.jpg",
+		"thumbText": "Брошура-каталог за гуми",
+		"subImagesCount": 2,
+		"client": "Видахим",
+		"projectType": "Брошура",
+		"description": "Каталог за гуми тип брошура с две сгъвки."
+	},
+	{
+		"projectName": "wall-calendar-vidachim-2013",
+		"thumbImg": "wall-calendar-vidachim-2013-thumb.jpg",
+		"thumbText": "Календари 12-листов, работен и тип плакат.",
+		"subImagesCount": 8,
+		"client": "Видахим",
+		"projectType": "Календари",
+		"description": "Стенен 12-листов календар, работен и календар тип плакат на тема Технически прогрес изработени за Видахим, гр. Видин."
+	},
+	{
 		"projectName": "wall-calendar-03",
 		"thumbImg": "wall-calendar-03-thumb.jpg",
 		"thumbText": "Wall calendar mockup 03",
