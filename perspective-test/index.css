@@ -51,6 +51,7 @@ p {
 .layers {
     position: relative;
     height: 400px;
+    transform-style: preserve-3d;
 }
 
 .layer {
@@ -65,12 +66,11 @@ p {
     margin: 0 auto;
 }
 
-/* 
-   The scale factor can be calculated with 
-   1 + (translateZ * -1) / perspective 
-*/
-
 .layer:nth-child(1) {
+    /* 
+       The scale factor can be calculated with 
+       1 + (translateZ * -1) / perspective 
+    */
     transform: translate3d(-50%, 0, -30px) scale(1.3);
 }
 
