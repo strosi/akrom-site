@@ -121,7 +121,7 @@
 .popup-layout>.inner-wrapper {
     overflow-x: auto;
     max-width: 1400px;
-    width: 90%;
+    width: 100%;
     height: 93%;
     margin: 0 auto;
     background-color: white;
@@ -129,7 +129,7 @@
 
 .popup-layout .content-holder {
     max-width: 1000px;
-    width: 80%;
+    width: 100%;
     padding: 3rem 0;
     margin: 0 auto;
 }
@@ -175,6 +175,14 @@
 @media (min-width: 900px) {
     .gallery-item {
         flex-basis: 33%;
+    }
+
+    .popup-layout>.inner-wrapper {
+        width: 90%;
+    }
+
+    .popup-layout .content-holder {
+        width: 80%;
     }
 
     .popup-layout .description {
