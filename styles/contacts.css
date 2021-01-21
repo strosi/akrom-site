@@ -105,18 +105,15 @@
     color: white;
 }
 
+.contacts .request-form .form-title h1 {
+    line-height: 1.4em;
+}
+
 .contacts .request-form form {
+    position: relative;
     padding-top: 1.5rem;
     padding-bottom: 3rem;
-}
-
-.contacts .request-form form button {
-    background: none;
-    border: 2px solid white;
-}
-
-.contacts .request-form form button:hover {
-    /* background-color: #ff9b65; */
+    z-index: 100;
 }
 
 .contacts .request-form .field {
@@ -127,6 +124,7 @@
 
 .contacts .request-form .field label {
     font-size: 0.8em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     margin: 0.5rem 0;
 }
@@ -139,6 +137,7 @@
     border-bottom-right-radius: 15px;
     background-color: #fff7ec;
     resize: none;
+    box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, .15);
 }
 
 .contacts .request-form input:focus,
@@ -155,6 +154,12 @@
     position: absolute;
     right: 0;
     margin-top: 1rem;
+    background: none;
+    border: 2px solid white;
+}
+
+.contacts .request-form form button:hover {
+    /* background-color: #ff9b65; */
 }
 
 .map iframe#gmap_canvas {
@@ -211,6 +216,6 @@
         justify-content: space-between;
     }
     .contacts .request-form .fields>div {
-        flex-basis: 45%;
+        flex-basis: 47%;
     }
 }
