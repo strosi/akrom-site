@@ -44,43 +44,63 @@
     <section class="contacts">
         <div class="outer-wrapper">
             <div class="contact-means">
+                <div class="section-title">
+                    <h2>Свържете се с нас на...</h2>
+                </div>
                 <ul>
                     <li class="phones">
-                        <img src="../images/footer-icons/phone.svg" alt="Phone icon">
+                        <img src="../images/contacts-icons/phone-icon.svg" alt="Phone icon">
+                        <p>Телефони</p>
                         <p>0885 88 33 84 <br>042 60 33 93</p>
                     </li>
-                    <li class="address">
-                        <img src="../images/footer-icons/address.svg" alt="Address icon">
-                        <p>Стара Загора, <br>ул. "Христо Ботев" 111, ет. 1</p>
-                    </li>
                     <li class="email">
-                        <img src="../images/footer-icons/envelope.svg" alt="Email icon">
+                        <img src="../images/contacts-icons/email-icon.svg" alt="Email icon">
+                        <p>E-mail</p>
                         <p>akrom@akrom-bg.com</p>
+                    </li>
+                    <li class="address">
+                        <img src="../images/contacts-icons/address-icon.svg" alt="Address icon">
+                        <p>Адрес</p>
+                        <p>Стара Загора, <br>ул. "Христо Ботев" 111, <br>първи етаж</p>
                     </li>
                 </ul>
             </div>
-            <div class="request-form">
-                <form action="" method="POST" id="send-request">
-                    <div class="field name">
-                        <label for="client-name">Твоите имена</label>
-                        <input type="text" id="client-name" required>
+        </div>
+        <div id="request" class="form-bgr">
+            <div class="bgr-ornament">
+                <img src="../images/form-bg.svg" alt="">
+            </div>
+            <div class="outer-wrapper">
+                <div class="request-form">
+                    <div class="form-title">
+                        <h1>Имате идея или въпрос към нас? <br>Изпратете ни запитване...</h1>
                     </div>
-                    <div class="field email">
-                        <label for="client-email">E-mail</label>
-                        <input type="text" id="client-email" required>
-                    </div>
-                    <div class="field type">
-                        <label for="request-type">Вид проект</label>
-                        <input type="text" id="request-type" required>
-                    </div>
-                    <div class="field descript">
-                        <label for="description">Описание на проекта</label>
-                        <textarea id="description" rows="3" required></textarea>
-                    </div>
-                    <div class="submit-btn">
-                        <button type="submit" form="send-request">Изпрати</button>
-                    </div>
-                </form>
+                    <form action="" method="POST" id="send-request">
+                        <div class="fields">
+                            <div class="client-info">
+                                <div class="field name">
+                                    <label for="client-name">Твоите имена</label>
+                                    <input type="text" id="client-name" required>
+                                </div>
+                                <div class="field email">
+                                    <label for="client-email">E-mail</label>
+                                    <input type="text" id="client-email" required>
+                                </div>
+                                <div class="field type">
+                                    <label for="request-type">Вид проект</label>
+                                    <input type="text" id="request-type" required>
+                                </div>
+                            </div>
+                            <div class="field descript">
+                                <label for="description">Описание на проекта</label>
+                                <textarea id="description" rows="12" required></textarea>
+                            </div>
+                        </div>
+                        <div class="submit-btn">
+                            <button type="submit" form="send-request">Изпрати</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

@@ -181,15 +181,12 @@
     .gallery-item {
         flex-basis: 33%;
     }
-
     .popup-layout>.inner-wrapper {
         width: 90%;
     }
-
     .popup-layout .content-holder {
         width: 80%;
     }
-
     .popup-layout .description {
         display: flex;
         flex-direction: row;
@@ -198,7 +195,6 @@
         align-items: baseline;
         margin: 5rem auto;
     }
-
     .popup-layout .inner-wrapper .description .title {
         width: 40%;
         padding-right: 1rem;

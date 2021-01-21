@@ -6,7 +6,7 @@
     position: relative;
     height: 378px;
     overflow: hidden;
-    background: linear-gradient(90deg, rgba(68, 109, 165, 0.9), rgba(92, 126, 172, 0.8)), url('../images/mailing.jpg');
+    background: linear-gradient(90deg, rgba(68, 109, 165, 0.9), rgba(92, 126, 172, 0.8)), url("../images/mailing.jpg");
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
@@ -18,7 +18,7 @@
     z-index: 10;
 }
 
-.header-illustration .header-text>h1 {
+.header-illustration .header-text > h1 {
     position: absolute;
     font-size: 1.7em;
     text-transform: uppercase;
@@ -29,45 +29,99 @@
 }
 
 .contacts .outer-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 7rem 0;
+    padding-top: 5rem;
 }
 
 .contacts .contact-means {
     margin: 0 auto;
-    margin-bottom: 3rem;
+}
+
+.contacts .contact-means ul {
+    padding-top: 3rem;
 }
 
 .contacts .contact-means li {
     display: flex;
+    flex-direction: column;
     line-height: 1.7em;
-    text-align: left;
     align-items: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid lightgrey;
+}
+
+.contacts .contact-means li.email {
+    padding-top: 2.2rem;
+}
+
+.contacts .contact-means li:last-child {
+    border: none;
+}
+
+.contacts .contact-means li img {
+    width: 5rem;
+}
+
+.contacts .contact-means .phones img {
+    margin-right: 1rem;
+}
+
+.contacts .contact-means .email img {
+    margin-left: 1.5rem;
+}
+
+.contacts .contact-means li p:nth-child(2) {
+    text-transform: uppercase;
+    color: #31c3c5;
     padding: 1rem 0;
 }
 
-.contacts .contact-means li p {
+.contacts .contact-means li p:last-child {
     font-size: 0.95em;
-    margin-left: 1rem;
+}
+
+.contacts .form-bgr {
+    position: relative;
+    background: radial-gradient(circle at 30% 10%, #0dcfb9, #6cafda);
+}
+
+.contacts .bgr-ornament {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+.contacts .bgr-ornament img {
+    width: 100%;
 }
 
 .contacts .request-form {
-    flex-basis: 60%;
     text-align: left;
+    width: 80%;
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
+    margin: 0 auto;
+    color: white;
 }
 
 .contacts .request-form form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+.contacts .request-form form button {
+    background: none;
+    border: 2px solid white;
+}
+
+.contacts .request-form form button:hover {
+    /* background-color: #ff9b65; */
 }
 
 .contacts .request-form .field {
     display: flex;
     flex-direction: column;
-    flex-basis: 100%;
     margin: 0.5rem 0;
 }
 
@@ -77,16 +131,17 @@
     margin: 0.5rem 0;
 }
 
-.contacts .request-form input, 
+.contacts .request-form input,
 .contacts .request-form textarea {
     font-size: 1em;
     padding: 0.7rem;
-    border: 1px solid #aaa;
+    border: 1px solid #329eb0;
+    border-bottom-right-radius: 15px;
     background-color: #fff7ec;
     resize: none;
 }
 
-.contacts .request-form input:focus, 
+.contacts .request-form input:focus,
 .contacts .request-form textarea:focus {
     outline: none;
 }
@@ -109,13 +164,24 @@
 }
 
 @media (min-width: 600px) {
-    .header-illustration .header-text>h1 {
+    .header-illustration .header-text > h1 {
         top: 50%;
         padding: 0;
     }
-    .contacts .request-form .field.name, 
-    .contacts .request-form .field.email {
-        flex-basis: 48%;
+    .contacts .contact-means {
+        margin: 0;
+    }
+    .contacts .contact-means ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .contacts .contact-means ul li {
+        flex-basis: 50%;
+        border: none;
+    }
+    .contacts .request-form {
+        width: 70%;
     }
 }
 
@@ -126,14 +192,25 @@
         transform: unset;
     }
     .contacts .outer-wrapper {
-        flex-direction: row;
+        max-width: 900px;
+    }
+    .contacts .contact-means ul {
         justify-content: space-between;
     }
-    .contacts .contact-means {
-        margin: 0;
-        margin-top: 1rem;
+    .contacts .contact-means ul li {
+        flex-basis: 33%;
     }
     .contacts .contact-means li p {
         font-size: 1em;
+    }
+    .contacts .request-form {
+        width: 90%;
+    }
+    .contacts .request-form .fields {
+        display: flex;
+        justify-content: space-between;
+    }
+    .contacts .request-form .fields>div {
+        flex-basis: 45%;
     }
 }
