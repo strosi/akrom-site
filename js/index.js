@@ -52,17 +52,29 @@ if (servicesList != null && worksSection != null) {
             if (worksSection.getBoundingClientRect().top < window.innerHeight) {
                 worksSection.classList.add('show');
             }
-
-
-            // for (let i = 0; i < worksList.length; i++) {
-            //     console.log(i + ' item was scaled');
-            //     if (worksList[i].getBoundingClientRect().top < window.innerHeight) {
-            //         worksList[i].classList.add('scale-normal');
-            //         worksList[i].style.transitionDelay = 60 * i + 'ms';
-            //     }
-            // }
         });
 
     }, false);
+}
+// <<<<<
+
+
+// >>>>>
+// Back to top of the page button
+
+const scrollTopBtn = document.querySelector('.back-to-top-btn');
+const target = document.querySelector('header');
+
+let observer = new IntersectionObserver(callback);
+observer.observe(target);
+
+function callback(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            scrollTopBtn.classList.add('show-btn');
+        } else {
+            scrollTopBtn.classList.remove('show-btn');
+        }
+    });
 }
 // <<<<<

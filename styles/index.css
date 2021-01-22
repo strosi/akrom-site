@@ -1,16 +1,16 @@
 @font-face {
-    font-family: 'Rubik';
-    src: url('../fonts/Rubik/Rubik-VariableFont_wght.ttf');
+    font-family: "Rubik";
+    src: url("../fonts/Rubik/Rubik-VariableFont_wght.ttf");
 }
 
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway/Raleway-VariableFont_wght.ttf');
+    font-family: "Raleway";
+    src: url("../fonts/Raleway/Raleway-VariableFont_wght.ttf");
 }
 
 @font-face {
-    font-family: 'Raleway-ExtraBold';
-    src: url('../fonts/Raleway/static/Raleway-ExtraBold.ttf');
+    font-family: "Raleway-ExtraBold";
+    src: url("../fonts/Raleway/static/Raleway-ExtraBold.ttf");
 }
 
 * {
@@ -20,15 +20,23 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
     text-align: center;
     color: #333;
     min-width: 300px;
 }
 
-h1, h2, h3, button, nav>ul li a {
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+h1,
+h2,
+h3,
+button,
+nav > ul li a {
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-weight: 600;
     letter-spacing: 0.03em;
 }
@@ -61,7 +69,7 @@ button:focus {
     outline: none;
 }
 
-ul>li {
+ul > li {
     list-style: none;
 }
 
@@ -70,7 +78,10 @@ a {
     color: #333;
 }
 
-nav>ul a, .menu-links>ul a, .section-title, .side-title {
+nav > ul a,
+.menu-links > ul a,
+.section-title,
+.side-title {
     text-transform: uppercase;
 }
 
@@ -82,7 +93,7 @@ nav>ul a, .menu-links>ul a, .section-title, .side-title {
 }
 
 .side-title h1 {
-    font-family: 'Raleway-ExtraBold', Arial, Helvetica, sans-serif;
+    font-family: "Raleway-ExtraBold", Arial, Helvetica, sans-serif;
     font-size: 7em;
     line-height: 70%;
 }
@@ -95,7 +106,7 @@ nav>ul a, .menu-links>ul a, .section-title, .side-title {
     border-bottom: 1px solid #ddd;
 }
 
-.top-bar>.outer-wrapper {
+.top-bar > .outer-wrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -129,7 +140,7 @@ nav>ul a, .menu-links>ul a, .section-title, .side-title {
     top: 24px;
 }
 
-.mobile-menu-toggle>span:nth-child(2) {
+.mobile-menu-toggle > span:nth-child(2) {
     position: absolute;
     top: 9px;
     font-size: 0.8em;
@@ -167,17 +178,18 @@ nav>ul a, .menu-links>ul a, .section-title, .side-title {
     border-bottom: 1px solid #ddd;
 }
 
-nav>ul {
+nav > ul {
     padding: 20px 0;
 }
 
-nav>ul li a {
+nav > ul li a {
     display: block;
     font-size: 0.85em;
     padding: 1rem 0.7rem;
 }
 
-nav>ul li a:hover, .active-page {
+nav > ul li a:hover,
+.active-page {
     color: #01d2b5;
 }
 
@@ -231,7 +243,8 @@ nav>ul li a:hover, .active-page {
 
 .about {
     color: white;
-    background: linear-gradient(90deg, rgba(68, 109, 165, 0.9), rgba(92, 126, 172, 0.8)), url('../images/design-work.jpg');
+    background: linear-gradient(90deg, rgba(68, 109, 165, 0.9), rgba(92, 126, 172, 0.8)),
+        url("../images/design-work.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -364,21 +377,21 @@ footer .content-holder {
     padding: 2rem 0;
 }
 
-footer .content-holder>div {
+footer .content-holder > div {
     width: 190px;
     padding: 2rem 0;
     margin: 0 auto;
 }
 
-footer .content-holder>div.contacts {
+footer .content-holder > div.contacts {
     min-width: 220px;
 }
 
-footer .content-holder>div.services-summary {
+footer .content-holder > div.services-summary {
     padding-left: 1.7rem;
 }
 
-footer .content-holder>div.menu-links {
+footer .content-holder > div.menu-links {
     text-align: center;
 }
 
@@ -415,6 +428,25 @@ footer .copyright {
     text-align: center;
     padding: 1.7rem 0;
     background-color: #1a3249;
+}
+
+.back-to-top-btn {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    position: fixed;
+    bottom: 3.3rem;
+    right: 1.5rem;
+    z-index: 200;
+}
+
+.back-to-top-btn.show-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top-btn svg {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
 }
 
 /* FOOTER END */
@@ -530,7 +562,8 @@ footer .copyright {
     .side-title {
         display: block;
     }
-    .services .outer-wrapper, .works .outer-wrapper {
+    .services .outer-wrapper,
+    .works .outer-wrapper {
         position: relative;
         z-index: 10;
     }
