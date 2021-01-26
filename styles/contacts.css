@@ -41,12 +41,18 @@
 }
 
 .contacts .contact-means li {
+    position: relative;
     display: flex;
     flex-direction: column;
     line-height: 1.7em;
     align-items: center;
     padding: 3rem 0;
     border-bottom: 1px solid lightgrey;
+}
+
+.contacts .contact-means li svg {
+    position: absolute;
+    top: 14px;
 }
 
 .contacts .contact-means li.email {
