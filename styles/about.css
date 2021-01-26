@@ -4,6 +4,7 @@
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 .header-illustration {
@@ -171,17 +172,20 @@ footer .content-holder {
     .header-illustration .header-text>h3:nth-child(2) {
         top: unset;
         bottom: 18.5rem;
-        transform: translateX(calc(-50% - (100vw - 350px) / 8));
+        /* transform: translateX(calc(-50% - (100vw - 350px) / 8)); */
+        transform: translateX(calc(-50% - (100vw - 350px) / 8)) translateY(-15px);
     }
     .header-illustration .header-text>h3:nth-child(3) {
         top: unset;
         bottom: 8rem;
-        transform: translateX(calc(-50% - (100vw - 350px) / 2));
+        /* transform: translateX(calc(-50% - (100vw - 350px) / 2)); */
+        transform: translateX(calc(-50% - (100vw - 320px) / 2)) translateY(-60px);
     }
     .header-illustration .header-text>h3:nth-child(4) {
         top: unset;
         bottom: 10rem;
-        transform: translateX(calc(-50% + (100vw - 350px) / 2));
+        /* transform: translateX(calc(-50% + (100vw - 350px) / 2)); */
+        transform: translateX(calc(-50% + (100vw - 320px) / 2)) translateY(15px);
     }
     /* .about .presentation {
         padding-bottom: 45%;
@@ -189,6 +193,12 @@ footer .content-holder {
 }
 
 @media (min-width: 900px) {
+    .header-illustration .about-drawing {
+        transform: translateX(-50%) translateY(150px);
+    }
+    .header-illustration .about-drawing img {
+        width: 700px;
+    }
     .header-illustration .header-text {
         position: static;
         top: unset;
