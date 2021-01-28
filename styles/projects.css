@@ -50,30 +50,30 @@
 }
 
 .header-illustration .header-text > h3:nth-child(2) {
-    top: 9rem;
+    top: 140px;
     transform: translateX(calc(-50% + 90px));
 }
 
 .header-illustration .header-text > h3:nth-child(3) {
-    top: 2rem;
+    top: 30px;
 }
 
 .header-illustration .header-text > h3:nth-child(4) {
-    top: 8rem;
+    top: 125px;
     transform: translateX(calc(-50% - 78px));
 }
 
 .header-illustration .header-text > h3:nth-child(5) {
-    top: 19rem;
+    top: 320px;
     transform: translateX(calc(-50% - 85px));
 }
 
 .header-illustration .header-text > h3:nth-child(6) {
-    top: 420px;
+    top: 425px;
 }
 
 .header-illustration .header-text > h3:nth-child(7) {
-    top: 20rem;
+    top: 345px;
     transform: translateX(calc(-50% + 90px));
 }
 
@@ -98,30 +98,23 @@
         transform: translateX(calc(-50% - 100vw / 40));
     }
     .header-illustration .header-text > h3:nth-child(7) {
-        transform: translateX(calc(-50% + 100vw / 3));
+        transform: translateX(calc(-50% + 90vw / 3));
     }
 }
 
 @media (min-width: 600px) {
-    .header-illustration .header-text > h3:nth-child(2) {
-        top: 9rem;
-    }
     .header-illustration .header-text > h3:nth-child(3) {
         min-width: 200px;
     }
-    .header-illustration .header-text > h3:nth-child(4) {
-        top: 8rem;
-    }
     .header-illustration .header-text > h3:nth-child(5) {
-        top: 19rem;
-        transform: translateX(calc(-50% - (100vw) / 3));
+        transform: translateX(calc(-50% - 100vw / 3)) translateY(-10px);
     }
     .header-illustration .header-text > h3:nth-child(6) {
-        top: 27rem;
         max-width: 250px;
+        transform: translateX(calc(-50% - 100vw / 40)) translateY(20px);
     }
     .header-illustration .header-text > h3:nth-child(7) {
-        top: 18rem;
+        transform: translateX(calc(-50% + 90vw / 3)) translateY(-10px);
     }
 }
 
@@ -149,27 +142,22 @@
         padding: 0;
     }
     .header-illustration .header-text > h3:nth-child(2) {
-        top: 9rem;
         transform: translateX(calc(-50% - (100vw + 70px) / 4));
     }
     .header-illustration .header-text > h3:nth-child(3) {
-        top: 3rem;
-        transform: translateX(calc(-50% - 100vw / 26));
+        transform: translateX(calc(-50% - 100vw / 26)) translateY(15px);
     }
     .header-illustration .header-text > h3:nth-child(4) {
-        top: 6rem;
-        transform: translateX(calc(-50% + 100vw / 6));
+        transform: translateX(calc(-50% + 100vw / 6)) translateY(-22px);
     }
     .header-illustration .header-text > h3:nth-child(5) {
-        top: 16rem;
+        transform: translateX(calc(-50% - 96vw / 3)) translateY(-65px);
     }
     .header-illustration .header-text > h3:nth-child(6) {
-        top: 11rem;
-        transform: translateX(calc(-50% + 100vw / 3));
+        transform: translateX(calc(-50% + 100vw / 3)) translateY(-244px);
     }
     .header-illustration .header-text > h3:nth-child(7) {
-        top: 17rem;
-        transform: translateX(calc(-50% + (100vw + 400px) / 4));
+        transform: translateX(calc(-50% + (100vw + 400px) / 4)) translateY(-60px);
     }
 }
 @media (min-width: 1200px) {
@@ -187,18 +175,18 @@
         transform: translateX(calc(-50% - 328px));
     }
     .header-illustration .header-text > h3:nth-child(3) {
-        transform: translateX(calc(-50% - 46px));
+        transform: translateX(calc(-50% - 46px)) translateY(15px);
     }
     .header-illustration .header-text > h3:nth-child(4) {
-        transform: translateX(calc(-50% + 170px));
+        transform: translateX(calc(-50% + 170px)) translateY(-22px);
     }
     .header-illustration .header-text > h3:nth-child(5) {
-        transform: translateX(calc(-50% - 380px));
+        transform: translateX(calc(-50% - 380px)) translateY(-65px);
     }
     .header-illustration .header-text > h3:nth-child(6) {
-        transform: translateX(calc(-50% + 400px));
+        transform: translateX(calc(-50% + 350px)) translateY(-244px);
     }
     .header-illustration .header-text > h3:nth-child(7) {
-        transform: translateX(calc(-50% + 370px));
+        transform: translateX(calc(-50% + 370px)) translateY(-60px);
     }
 }

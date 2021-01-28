@@ -1,5 +1,14 @@
 [
 	{
+		"projectName": "wall-calendar-sz-district-2021",
+		"thumbImg": "wall-calendar-sz-district-2021-thumb.jpg",
+		"thumbText": "Стенен календар 2021",
+		"subImagesCount": 8,
+		"client": "Областна управа - Стара Загора",
+		"projectType": "Стенен календар",
+		"description": "Многолистов стенен календар с размери 330х460мм изработен по поръчка."
+	},
+	{
 		"projectName": "wall-calendar-podkrepa-2021",
 		"thumbImg": "wall-calendar-podkrepa-2021-thumb.jpg",
 		"thumbText": "Стенен календар 2021",

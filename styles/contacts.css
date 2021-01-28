@@ -128,7 +128,6 @@
 .contacts .form-bgr {
     position: relative;
     background: radial-gradient(circle at 30% 10%, #0dcfb9, #6cafda);
-    /* border-bottom-right-radius: 20%; */
 }
 
 .contacts .bgr-ornament {

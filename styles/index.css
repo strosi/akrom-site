@@ -437,7 +437,7 @@ footer .copyright {
     position: fixed;
     bottom: 3.3rem;
     right: 1.5rem;
-    z-index: 200;
+    z-index: 20;
 }
 
 .back-to-top-btn.show-btn {
