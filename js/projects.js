@@ -1,4 +1,4 @@
-const isHomePage = document.querySelector('title').innerHTML === 'Акром';
+const isHomePage = document.querySelector('body').id === 'home';
 let path = 'images/main-gallery/';
 
 if(!isHomePage) {

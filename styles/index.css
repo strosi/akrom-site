@@ -47,7 +47,7 @@ h3 {
 }
 
 .outer-wrapper {
-    max-width: 85%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -121,14 +121,14 @@ nav > ul a,
     position: relative;
     text-align: left;
     width: 50px;
-    height: 35px;
+    height: 36px;
 }
 
 .mobile-menu-toggle span.line {
     position: absolute;
     top: 2px;
     display: block;
-    width: 30px;
+    width: 32px;
     height: 1px;
     background-color: #333;
     margin: 3px 5px;
@@ -137,13 +137,13 @@ nav > ul a,
 }
 
 .mobile-menu-toggle span:last-child {
-    top: 24px;
+    top: 25px;
 }
 
 .mobile-menu-toggle > span:nth-child(2) {
     position: absolute;
     top: 9px;
-    font-size: 0.8em;
+    font-size: 0.85em;
     transition: opacity 0.2s ease;
 }
 
@@ -157,7 +157,7 @@ nav > ul a,
 }
 
 .mobile-menu-toggle.active span:last-child {
-    transform: translateY(-11px) rotate(-45deg);
+    transform: translateY(-12px) rotate(-45deg);
 }
 
 .nav-holder {
@@ -206,7 +206,8 @@ nav > ul li a:hover,
 }
 
 .header-text {
-    max-width: 350px;
+    font-size: 1em;
+    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -363,65 +364,78 @@ nav > ul li a:hover,
 /* FOOTER START */
 
 footer {
-    font-size: 0.8em;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 0.9em;
     line-height: 1.5em;
     text-align: left;
-    color: #7ea3cb;
+    color: #a4cffd;
     background-color: #355679;
+}
+
+footer span {
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+footer h3 {
+    font-size: 1.05rem;
+    padding-bottom: 0.27rem;
 }
 
 footer .content-holder {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 2rem 0;
-}
-
-footer .content-holder > div {
-    width: 190px;
-    padding: 2rem 0;
+    max-width: 220px;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
     margin: 0 auto;
 }
 
-footer .content-holder > div.contacts {
-    min-width: 220px;
-}
-
-footer .content-holder > div.services-summary {
-    padding-left: 1.7rem;
-}
-
-footer .content-holder > div.menu-links {
-    text-align: center;
-}
-
-footer .contacts li {
-    display: flex;
-    align-items: center;
-}
-
-footer .contacts img {
-    width: 30px;
-}
-
-footer .contacts li p {
-    padding-left: 1em;
-}
-
-footer li {
+footer .content-holder div {
     padding-bottom: 1rem;
 }
 
-footer li:last-child {
-    padding: 0;
+footer .content-holder .agency-summary img {
+    width: 160px;
+    padding-bottom: 0.5rem;
+}
+
+footer .content-holder .agency-summary p:nth-child(2) {
+    font-size: 0.85em;
+    text-transform: uppercase;
+}
+
+footer .content-holder .agency-summary p:last-child {
+    display: none;
+}
+
+footer .content-holder .menu-links {
+    display: none;
 }
 
 footer a {
-    color: #7ea3cb;
+    color: #a4cffd;
 }
 
-footer a:hover {
-    color: white;
+footer .content-holder > div.menu-links a {
+    text-transform: none;
+}
+
+footer .contacts li {
+    padding-bottom: 1.5rem;
+}
+
+footer .contacts img {
+    display: none;
+}
+
+footer .contacts .phone p:last-child {
+    font-size: 1.5em;
+    padding-top: 0.25rem;
+    padding-bottom: 0.4rem;
 }
 
 footer .copyright {
@@ -456,10 +470,18 @@ footer .copyright {
 /* MEDIA QUERIES */
 
 @media (min-width: 600px) {
-    .outer-wrapper {
-        max-width: 1170px;
-        width: 80%;
+    .logo img {
+        width: 125px;
     }
+    .header-text {
+        font-size: 1.1em;
+    }
+    .header-text h3 {
+        max-width: 280px;
+    }
+    /* .header-text h1 {
+        font-size: 2.3em;
+    } */
     .illustration img {
         width: 90%;
     }
@@ -473,7 +495,7 @@ footer .copyright {
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translateY(-50%) translateX(-50%);
+        transform: translateX(-50%) translateY(-50%);
     }
     .about .presentation button {
         margin: 0;
@@ -495,9 +517,44 @@ footer .copyright {
     .works .section-title a {
         margin-top: 0;
     }
+    footer .content-holder {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100%;
+    }
+
+    footer .content-holder .agency-summary {
+        flex-basis: 50%;
+        max-width: 265px;
+    }
+
+    footer .content-holder .agency-summary p:last-child {
+        display: block;
+        text-transform: unset;
+        padding-top: 1.2rem;
+    }
+
+    footer .content-holder div h3 {
+        display: none;
+    }
+
+    footer .contacts {
+        flex-basis: 40%;
+        text-align: right;
+    }
+
+    footer .contacts li {
+        padding-left: 2rem;
+    }
 }
 
 @media (min-width: 900px) {
+    .outer-wrapper {
+        max-width: 1170px;
+    }
+    .logo img {
+        width: 130px;
+    }
     .mobile-menu-toggle {
         display: none;
     }
@@ -529,8 +586,9 @@ footer .copyright {
     .header-text {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
         text-align: left;
+        max-width: 37%;
+        transform: translateY(-50%);
     }
     .header-text h1 {
         padding-top: 50px;
@@ -570,12 +628,31 @@ footer .copyright {
     .service {
         flex-basis: 33%;
     }
+    footer .contacts .phone {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: end;
+    }
+
+    footer .contacts img {
+        display: block;
+        width: 55px;
+        margin-right: 1rem;
+    }
+
+    footer .contacts .phone p:last-child {
+        padding-bottom: 0;
+    }
 }
 
 @media (min-width: 1200px) {
+    .logo img {
+        width: 140px;
+    }
     .header-text {
         font-size: 1.3em;
-        max-width: 440px;
+        max-width: 470px;
     }
     .illustration img {
         max-width: 950px;
@@ -585,11 +662,11 @@ footer .copyright {
     }
     .about .presentation h3 {
         font-size: 1.2em;
-        max-width: 500px;
+        max-width: 505px;
     }
     .header-text h3 {
         font-weight: 400;
-        max-width: 320px;
+        max-width: 325px;
     }
     .side-title h1 {
         font-size: 8em;
@@ -597,5 +674,17 @@ footer .copyright {
     .service {
         font-size: 1.1em;
         height: 300px;
+    }
+    footer .content-holder .menu-links {
+        display: block;
+    }
+
+    footer .content-holder div.menu-links li {
+        padding: 0.5rem 0;
+    }
+
+    footer .content-holder div.menu-links h3 {
+        display: block;
+        padding: 0.7rem 0;
     }
 }

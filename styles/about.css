@@ -54,7 +54,7 @@
 }
 
 .header-illustration .header-text>h3:nth-child(4) {
-    top: 23.5rem;
+    top: 25rem;
 }
 
 .about {
@@ -84,7 +84,7 @@
 }
 
 footer .content-holder {
-    padding-top: 3rem;
+    padding-top: 7rem;
 }
 
 @media (min-width: 400px) {
@@ -141,7 +141,7 @@ footer .content-holder {
         width: 100%;
         bottom: 0;
         left: 50%;
-        transform: translateX(-50%) translateY(22px);
+        transform: translateX(-50%) translateY(40px);
         overflow: hidden;
     }
     
@@ -168,7 +168,7 @@ footer .content-holder {
         transform: unset;
     }
     .header-illustration .header-text>h3 {
-        max-width: 250px;
+        max-width: 255px;
         padding: 1.3rem;
     }
     .header-illustration .header-text>h3:nth-child(3) {
