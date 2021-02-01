@@ -42,7 +42,7 @@ nav > ul li a {
 }
 
 h3 {
-    font-size: 1em;
+    font-size: 1.07em;
     line-height: 1.5;
 }
 
@@ -218,7 +218,7 @@ nav > ul li a:hover,
 }
 
 .header-text h3 {
-    max-width: 250px;
+    max-width: 280px;
     padding-bottom: 50px;
     margin: 0 auto;
 }
@@ -257,7 +257,7 @@ nav > ul li a:hover,
 
 .about .presentation h3 {
     font-weight: 400;
-    max-width: 420px;
+    max-width: 455px;
     padding-top: 1rem;
     padding-bottom: 2rem;
     margin: 0 auto;
@@ -324,7 +324,7 @@ nav > ul li a:hover,
 }
 
 .service p {
-    font-size: 0.9em;
+    font-size: 0.95em;
     max-width: 245px;
     padding-top: 0.5rem;
     padding-bottom: 1.5rem;
@@ -366,7 +366,7 @@ nav > ul li a:hover,
 footer {
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-weight: 300;
-    font-size: 0.9em;
+    font-size: 0.95em;
     line-height: 1.5em;
     text-align: left;
     color: #a4cffd;
@@ -451,7 +451,7 @@ footer .copyright {
     position: fixed;
     bottom: 3.3rem;
     right: 1.5rem;
-    z-index: 20;
+    /* z-index: 20; */
 }
 
 .back-to-top-btn.show-btn {
@@ -477,7 +477,7 @@ footer .copyright {
         font-size: 1.1em;
     }
     .header-text h3 {
-        max-width: 280px;
+        max-width: 300px;
     }
     /* .header-text h1 {
         font-size: 2.3em;
@@ -654,6 +654,10 @@ footer .copyright {
         font-size: 1.3em;
         max-width: 470px;
     }
+    .header-text h3 {
+        font-weight: 400;
+        max-width: 355px;
+    }
     .illustration img {
         max-width: 950px;
     }
@@ -663,10 +667,6 @@ footer .copyright {
     .about .presentation h3 {
         font-size: 1.2em;
         max-width: 505px;
-    }
-    .header-text h3 {
-        font-weight: 400;
-        max-width: 325px;
     }
     .side-title h1 {
         font-size: 8em;

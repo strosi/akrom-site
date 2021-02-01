@@ -36,6 +36,7 @@
 
 .header-illustration .header-text>h3 {
     position: absolute;
+    font-size: 1em;
     font-weight: 400;
     min-width: 245px;
     left: 50%;
@@ -46,15 +47,15 @@
 }
 
 .header-illustration .header-text>h3:nth-child(2) {
-    top: 10.5rem;
+    top: 168px;
 }
 
 .header-illustration .header-text>h3:nth-child(3) {
-    top: 17rem;
+    top: 273px;
 }
 
 .header-illustration .header-text>h3:nth-child(4) {
-    top: 25rem;
+    top: 400px;
 }
 
 .about {
@@ -100,6 +101,9 @@ footer .content-holder {
 }
 
 @media (min-width: 600px) {
+    .header-text h3 {
+        max-width: 263px;
+    }
     .header-illustration {
         height: 450px;
         background-position: center;
@@ -118,17 +122,17 @@ footer .content-holder {
     }
     .header-illustration .header-text>h3:nth-child(2) {
         top: unset;
-        bottom: 18.5rem;
+        bottom: 295px;
         transform: translateX(calc(-50% - (100vw - 350px) / 8)) translateY(-15px);
     }
     .header-illustration .header-text>h3:nth-child(3) {
         top: unset;
-        bottom: 8rem;
+        bottom: 128px;
         transform: translateX(calc(-50% - (100vw - 320px) / 2)) translateY(-60px);
     }
     .header-illustration .header-text>h3:nth-child(4) {
         top: unset;
-        bottom: 10rem;
+        bottom: 160px;
         transform: translateX(calc(-50% + (100vw - 320px) / 2)) translateY(15px);
     }
     .about .presentation {
