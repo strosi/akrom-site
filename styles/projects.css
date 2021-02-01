@@ -44,8 +44,7 @@ h3 {
     position: absolute;
     font-weight: 400;
     line-height: 1.3em;
-    min-width: 140px;
-    max-width: 150px;
+    width: 153px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 2em;
@@ -114,7 +113,7 @@ h3 {
         transform: translateX(calc(-50% - 100vw / 3)) translateY(-10px);
     }
     .header-illustration .header-text > h3:nth-child(6) {
-        max-width: 250px;
+        width: 250px;
         transform: translateX(calc(-50% - 100vw / 40)) translateY(20px);
     }
     .header-illustration .header-text > h3:nth-child(7) {
