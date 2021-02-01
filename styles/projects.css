@@ -72,6 +72,7 @@ h3 {
 }
 
 .header-illustration .header-text > h3:nth-child(6) {
+    width: 170px;
     top: 425px;
 }
 
